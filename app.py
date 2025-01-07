@@ -74,7 +74,7 @@ if st.button("Submit"):
         else:
             
             #Daily Data
-            st.subheader("Daily High/Low Forecasting")
+            st.subheader(f"Daily High/Low Forecasting for {user_location}")
             scaled_data_daily, time_daily, scaler_daily = load_and_preprocess_daily_data(latitude, longitude, is_daily=True)
             daily_model = load_model("daily_data_model.keras")
             daily_predictions = recursive_forecasting(daily_model, scaled_data_daily, 7, 100)
@@ -90,7 +90,7 @@ if st.button("Submit"):
 
 
             #Hourly Data
-            st.subheader("Hourly Temperature Forecasting")
+            st.subheader(f"Hourly Temperature Forecasting for {user_location}")
             current_time = pd.Timestamp.now()
             forecast_hours = 7 
             scaled_data_hourly, time_hourly, scaler_hourly = load_and_preprocess_hourly_data(latitude, longitude)
