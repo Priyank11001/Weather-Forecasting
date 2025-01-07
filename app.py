@@ -62,7 +62,7 @@ def recursive_forecasting(model, input_data, forecast_steps, timestep):
 #Streamlit UI for the weather forecasting app
 st.title("Weather Forecasting App 🌤️")
 st.write("Predict weather conditions based on location and LSTM models.")
-user_location = st.text_input("Enter Location", placeholder="e.g., Vancouver, Canada")
+user_location = st.text_input("Enter Location", placeholder="e.g., Delhi, India")
 
 if st.button("Submit"):
     if not user_location:
