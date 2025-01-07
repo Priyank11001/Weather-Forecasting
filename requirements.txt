@@ -1,0 +1,7 @@
+meteostat
+tensorflow==2.17.1
+streamlit
+pandas
+numpy
+scikit-learn
+geopy
